@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="64dp"
-    android:id="@+id/cardview"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/cardView"
+    app:cardBackgroundColor="@color/student_bg"
+    android:layout_height="64dp"
     android:layout_marginLeft="6dp"
     android:layout_marginRight="6dp"
     android:layout_marginTop="6dp"
@@ -13,49 +14,72 @@
     app:cardCornerRadius="4dp">
 
     <RelativeLayout
-        android:paddingLeft="36dp"
+        android:id="@+id/attendance_lay"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:layout_centerVertical="true"
-            >
+            android:layout_marginStart="16dp"
+            android:layout_centerVertical="true">
 
             <TextView
-                android:id="@+id/roll"
+                android:id="@+id/serial"
+               android:gravity="center_vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/andika"
                 android:text="01"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
-            <TextView
-                android:id="@+id/name"
-                android:layout_marginLeft="56dp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_toRightOf="@id/serial"
+                android:layout_marginLeft="16dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
                 android:layout_width="wrap_content"
-                android:text="KUNJ PATEL"
-                android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/roll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:fontFamily="@font/andika"
+                    android:text="1190999"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/andika"
+                    android:text="Sakib Ahmed"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
             <TextView
                 android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="36dp"
-                android:layout_width="wrap_content"
+                android:fontFamily="@font/andika"
                 android:text="P"
-                android:layout_height="wrap_content"
-                android:textColor="#000000"
+                android:textColor="@color/text_color"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
-
-
-
+                android:textStyle="bold" />
         </RelativeLayout>
 
     </RelativeLayout>
-
 </androidx.cardview.widget.CardView>
